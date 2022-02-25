@@ -1,0 +1,138 @@
+#delnav{
+	display: flex;
+	justify-content: space-evenly;
+	white-space: 200px;
+background-color: maroon;
+color: white;
+opacity: 1;
+padding: 15px;
+text-transform: capitalize;
+
+}
+
+#delnav img{
+border-radius: 50px;
+}
+#serexp{
+  color: white;
+padding: 10px;
+  background-color: gold;
+color: red;
+
+
+}
+#serexp p{
+	text-align: center;
+font-size: 15px;
+}
+#slidewindow{
+display:flex;
+justify-content: space-around;
+
+}
+
+
+#buttons1{
+	opacity: .8;
+	background-color: #867e7e;
+	display:flex;
+justify-content: space-around;
+padding: 10px;
+}
+#buttons1 button{
+	padding: 10px;
+	color: black;
+	background-color: white;
+	opacity: 1;
+	border-radius: 30px;
+
+}
+
+#guidelines p{
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	color: black;
+	background-color: red;
+	padding: 10px;
+	opacity: .6;
+
+}
+#guidelines {
+	padding: 20px;
+	display: none;
+}
+#guidelist li{
+   list-style: none;
+   color :green;
+	
+
+}
+#guidelist h4{
+	font-size: 20px;
+	color: red;
+}
+
+#guidelist ul{
+	display: flex;
+  justify-content:space-around;
+font-size: 20px;
+	
+}
+#guide{
+padding: 5px;
+margin-top: 20px;
+color: black;
+background-color: red;
+border-radius: 200px;
+margin-left: 800px;
+font-size: 20px;
+}
+#foot1{
+  color: white;
+  float: right;
+  list-style: none;
+display: inline-block;
+justify-content: flex-start;
+margin-left: 161.5px;
+margin-right: 160px;
+
+}
+#foot2{
+  list-style: none;
+  color: white;
+  float: right;
+margin-left: 220px;
+  margin-right: 0px;
+
+  display: inline-block;
+
+  justify-content: flex-end;
+}
+#foot3{
+   color: white;
+  list-style: none;
+  float: right;
+  margin-left: 150px;
+
+  display: inline-block;
+justify-content: center;
+}
+#foot3 a{
+  color: white;
+  text-decoration: none;
+}
+#foot2 a{
+  color: white;
+  text-decoration: none;
+}
+#footer{
+  
+margin-left: 0px;
+  background-color: maroon;
+  color: white;
+    display: inline-block;
+justify-content: space-between;
+  
+padding: 20px;
+}

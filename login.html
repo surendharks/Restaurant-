@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>LOGIN PAGE</title>
+<link rel="stylesheet" type="text/css" href="login.css">
+<script src="com.js"></script>
+<style type="text/css">
+	
+	
+	#tabling{
+    background-color: white;
+  }
+  
+  
+  
+
+   
+    
+    #upi{
+                  display: none;
+
+    }
+    #cash{
+            display: none;
+
+
+    }
+    #card{
+                  display: none;
+
+    }
+    #mode{
+      margin-top: 20%;
+            text-align: center;
+            
+    }
+    		
+    
+    #upi input,pre,h3,img{
+      color: blue;
+      background-color: white;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    #cash input{
+        background-color: white;
+        color: blue;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    #card input{
+       background-color: white;
+        color: blue;
+      padding: 10px;
+      border-radius: 10px;
+
+    }
+   #card
+    {
+    	float: right;
+
+margin-right: 50px;
+          margin-top: -500px;
+    	}
+    	 #upi,#cash{
+      
+float: right;
+
+margin-right: 50px;
+          margin-top: -400px;
+
+    }
+    #orderdet{
+
+      display: none;
+    }
+
+
+
+
+
+#userh1{
+	color: white;
+	background-color: maroon;
+	text-align: center;
+	padding: 10px;
+}
+#userform li{
+	font-size: 15px;
+		text-decoration: none;
+padding: 20px;
+	display: inline-block;
+
+}
+#userform ul{
+	list-style: none;
+
+}
+#userform {
+padding: 10px;
+}
+ 
+ li{
+ 	list-style: none;
+ }
+a{
+	text-align: center;
+
+}
+
+#tabling{
+	background-color: white;
+		margin-left: 100px;
+			height: 100px;
+			width: 50px;
+			border-radius: 20px;
+
+
+}
+textarea{
+	text-align: center;
+	font-size: 15px;
+	border: solid;
+}
+
+
+#userform{
+	background-color: gray;
+	margin-top: -22px;
+		border-radius: 40px;
+}
+
+
+#bottom{background-color: lightgray;}
+
+#flogin{display: block;}
+
+#usersub{margin-left: 550px;}
+
+
+#address{
+	margin-left: 100px;
+}
+
+#avail{
+	margin-left: 500px;
+}
+#gateway{
+	background-color: gold;
+	padding: 100px;
+		margin-top: -21px;
+		display: none;
+
+}
+h1{
+	color: white;
+	background-color: maroon;
+	border-radius: 10px;
+	text-align: center;
+	padding: 10px;
+	display: none;
+}
+
+#mode input{
+	display: inline-block;
+	justify-content: space-evenly;
+	background-color: red;
+	color: white;
+	border-radius: 20px;
+	height: 60px;
+
+width: 100px;
+padding: 5px;
+border-color: black;}
+#payfoot{
+	margin-top: -21px;
+	display: none;
+}
+
+
+</style>
+</head>
+<body>
+					<h1 id="payhead">Payment</h1>
+
+
+	<div id="gateway">
+
+	<div id="mode">
+
+		<input type="button" name="" id="upib" value="UPI" onclick="upib()">
+				<input type="button" name="" id="cardb" value="CARD" onclick="cardb()">
+						<input type="button" name="" id="cashb" value="CASH" onclick="cashb()">
+
+
+	</div>
+
+</div>
+						<h1 id="payfoot"><br></h1>
+
+<!------review order------------>
+
+<div id="rorderdet">
+<div id="rtab">
+	<table border="2" cellpadding="30px" id="tabling" >
+		<tr ><td  align="center" cellpadding="0px"><img src="./images/logo.jpg" height="50px" width="50px"></td><td colspan="4" align="center" style="font-family: papyrus;font-size: 30px;">South Indian Deligious
+			<br></td></tr>
+		<tr>
+<th>SI.NO</th>	
+<th>Food</th>
+<th>Rate</th>
+<th>Quantity</th>
+
+<th>Price</th>
+		</tr>
+			<br>
+
+			<tr id="rloop">
+			<td id="rsino"></td>
+		    <td id="rfoodn"></td>
+		    <td id="rcost"></td>
+			<td id="rquantity"></td>
+			
+				<td id="rprice"></td>
+
+
+		</tr>	</table>
+</div><br><br>
+<span id="rtotal">TOTAL=</span>
+	
+</div>	
+
+<script type="text/javascript">
+			function displogin()
+		{
+			
+document.getElementById("login").style.display="none";
+//document.getElementById("menulist").style.display="block";
+//document.getElementById("lhead").innerHTML="Select your food";
+document.getElementById("flogin").style.display="none";
+document.getElementById("loginnav").style.display="none";
+
+
+
+
+		}
+		function payment()
+
+		{
+
+
+			document.getElementById("payhead").style.display="block";
+						document.getElementById("gateway").style.display="block"
+
+						document.getElementById("payfoot").style.display="block"
+												document.getElementById("payfoot").style.display="block"
+																		document.getElementById("orderdet").style.display="none"
+																			document.getElementById("lhead").style.display="none";
+
+
+
+
+		}
+		 function cardb(){
+		 							document.getElementById("rorderdet").style.display="block";
+
+		 	review()
+    	    	document.getElementById('mode').style.display="none"
+
+    	document.getElementById('card').style.display="block"
+    	document.getElementById("payhead").style.display="block";
+						document.getElementById("gateway").style.display="none"
+
+						document.getElementById("payfoot").style.display="none"
+    }
+    function upib(){
+    							document.getElementById("rorderdet").style.display="block";
+
+    	review()
+    	    	    	document.getElementById('mode').style.display="none";
+
+
+    	document.getElementById('upi').style.display="block";
+    	document.getElementById("payhead").style.display="block";
+						document.getElementById("gateway").style.display="none"
+
+						document.getElementById("payfoot").style.display="none"
+}
+function cashb(){
+							document.getElementById("rorderdet").style.display="block";
+
+	review()
+    	    	document.getElementById('mode').style.display="none"
+
+    	    	document.getElementById('orderdet').style.display="none"
+
+    	document.getElementById('cash').style.display="block"
+    	document.getElementById("payhead").style.display="block";
+						document.getElementById("gateway").style.display="none"
+
+						document.getElementById("payfoot").style.display="none"
+
+    }
+
+    
+    
+    
+
+	
+		
+		</script>
+</li>
+			
+	</ul>
+		
+	</div>
+</div>
+<div id="card">
+			
+			<img src="./images/card.jpg" width="300px" height="200px" align="center"><br><br>
+			<div id="AMT"></div>
+					<br><br>	
+							<input type="text" name="upi" placeholder="Card Number">
+		<br><br>
+									<input type="text" name="upi" placeholder="Expiry Date">
+									<br><br>
+																<input  type="text" name="upi" placeholder="CVV">
+
+
+
+<br><br>
+		<input class ="paybut" type="submit" value="pay" >
+
+	</div>
+<!-----upi---->
+	<div id="upi">
+]		
+			<img src="./images/upi.jpg" width="300px" height="200px" align="center"><br><br>
+			<div id="AMT"></div>
+		<input type="text" name="upi" placeholder="Mention your UPI ID">
+					<br><br>			<br>
+
+
+		<input class ="paybut"  type="submit" value="pay">
+
+	</div>
+
+	<!----cash--->
+	<div id="cash">
+			
+			<img src="./images/cod.jpg" width="300px" height="200px" align="center"><br><br>
+			<div id="AMT"></div>
+					<br><br>			<br>
+
+
+		<input   type="button" value="Place" >
+
+</div>
+
+
+			
+			
+
+
+
+	<h3 id="lhead">Select your food</h3>
+<div id="foodch">
+    <div id="menulist">
+    
+    	<div id="fooditems">
+    		<ul id="starter">
+    			<h4 class="foodhead">Starter</h4>
+    			<li>
+    			
+
+    				<button onclick="loadmenu(1)" id="b1"><img src="./images/PASTHA.jpg" width="100px" height="100px" align="center" ><span>PASTHA  <B>RS 70</B></span></button> 
+    				
+    			</li>
+    			<li>
+    				<button  onclick="loadmenu(2)" id="b2"><img src="./images/NOODLES.jpg" width="100px" height="100px" align="center"> <span>NOODLES  <B>RS 70</B></span></button>
+    			</li>
+    			<li>
+    				<button onclick="loadmenu(3)"id="b3"><img src="./images/kakorikebabs.webp" width="100px" height="90px" align="center"> <span>CUTTLY  <B>RS 70</B></span></button>
+    			</li>
+
+    			<li><button onclick="loadmenu(4)" id="b4"><img src="./images/microwavepaneertikkas.webp" width="100px" height="100px" align="center">
+
+    			<span>PANEER MASALA <B>RS 70</B></span></button></li>
+
+    			<li><button onclick="loadmenu(5)" id="b5"><img src="./images/alooanddalkitikki.webp" width="100px" height="100px" align="center"><span> DOKALA <B>RS 70</B></span></button></li>
+
+    			<li><button onclick="loadmenu(6)" id="b6"><img src="./images/cheeseballs.webp" width="100px" height="100px" align="center"><span>CHEESE BALLS <B>RS 70</B></span></button></li>
+
+    			<li><br><br><button onclick="loadmenu(7)" id="b7"><img src="./images/main1.jpg" width="100px" height="100px" align="center"><span>FRIDE RICE <B>RS 70</B></span></button></li>
+
+    			<li><button onclick="loadmenu(8)" id="b8"><img src="./images/main2.jpg" width="100px" height="100px" align="center"><span>MOMUS <B>RS 70</B></span></button></li>
+            </ul>
+
+            <ul id="maindish">
+            	<h4 class="foodhead">main</h4>
+    			<li>
+    				<button onclick="loadmenu(9)" id="b9"><img src="./images/main3.jpg" width="100px" height="100px" align="center"><span>PARROTA <B>RS 70</B></span> </button>
+    			</li>
+    			<li>
+    				<button onclick="loadmenu(10)" id="b10"><img src="./images/CURD.jpg" width="100px" height="100px" align="center"><span>CURD RICE <B>RS 70</B></span></button>
+    			</li>
+    			<li>
+    				<button onclick="loadmenu(11)" id="b11"><img src="./images/DOSA.jpg" width="100px" height="100px" align="center"><span>DOSA <B>RS 70</B></span></button>
+    			</li>
+
+    			<li><button onclick="loadmenu(12)"  id="b12"><img src="./images/main4.jpg" width="100px" align="center"height="100px"> <span>IDLY & SAMABR <B>RS 70</B></span></button>
+    			</li>
+    			<li><button onclick="loadmenu(13)" id="b13"><img src="./images/main5.jpg" width="100px" height="100px" align="center"> <span>SAPATHI &MASALA <B>RS 70</B></span></button></li>
+    			<li><br><br><button onclick="loadmenu(14)" id="b14"><img src="./images/main6.jpg" width="100px" height="100px"align="center">
+    			<span>SOUTH INDIAN PLATE <B>RS 70</B></span></button></li>
+    			<li><br><br><button onclick="loadmenu(15)" id="b15"><img src="./images/main7.jpg" width="100px" height="100px" align="center"><span>PONGAL &SAMBAR <B>RS 70</B></span></button></li>
+    			<li><button onclick="loadmenu(16)" id="b16"><img src="./images/main8.jpg" width="100px" height="100px" align="center">
+    			<span>VARIETY RICE <B>RS 70</B></span></button></li>
+    		
+    	</ul>
+    	    	
+    	    		
+    		 <ul id="juice">
+    		 	<h4 class="foodhead">juice</h4>
+    			<li>
+    				<button onclick="loadmenu(17)" id="b17"><img src="./images/juice1.jpg" width="100px" height="100px"align="center" >
+    			<span>PINEAPPLE JUICE <B>RS 70</B></span></button>
+    			</li>
+
+    			<li><button onclick="loadmenu(18)" id="b18"><img src="./images/juice2.jpg" width="100px" height="100px"align="center">
+    				<span>STRAWBERRY JUICE <B>RS 70</B></span></button>
+    			</li>
+    			<li><button onclick="loadmenu(19)" id="b19"><img src="./images/juice3.jpg" width="100px" height="100px"align="center"><span>LEMON JUICE <B>RS 70</B></span></button></li>
+    				
+    			<li><button onclick="loadmenu(20)" id="b20"><img src="./images/juice4.jpg" width="100px" height="100px"align="center"> <span>APPLE JUICE <B>RS 70</B></span></button></li>
+    			<li><br><br><button onclick="loadmenu(21)" id="b21"><img src="./images/juice5.jpg" width="100px" height="100px"align="center"><span>MIXED FRUIT JUICE <B>RS 70</B></span></button></li>
+    			<li><br><br><button onclick="loadmenu(22)" id="b22"><img src="./images/juice6.jpg" width="100px" height="100px"align="center"><span>BANANA JUICE <B>RS 70 </B></span></button></li>
+    			<li><button onclick="loadmenu(23)" id="b23"><img src="./images/watermelon.jpg" width="100px" height="100px"align="center"><span>WATER MELON JUICE <B>RS 70</B></span></button></li>
+    			<li><button onclick="loadmenu(24)" id="b24"><img src="./images/grap.jpg" width="100px" height="100px"align="center"><span>GRAPE JUICE <B>RS 70</B></span></button></li>
+    			
+    		
+    	</ul>
+    	    	
+    	    	    	
+
+
+    </div>
+    <section id ="next" ><button onclick="loadmenu(25)">NEXT</button></section>
+
+</div>
+
+
+</div>
+
+<div id="message">
+<h5 id="mess">Total cost is Zero please check Quantity order canceled TRY again</h5>
+<a href="login.html">Back</a>
+</div>
+<div id="orderdet">
+<div id="tab">
+	<table border="2" cellpadding="50px" id="tabling">
+		<tr>
+<th>SI.NO</th>	
+<th>Food</th>
+<th>Rate</th>
+<th>Quantity</th>
+
+<th>Price</th>
+		</tr>
+			<br>
+
+			<tr id="loop">
+			<td id="sino"></td>
+		    <td id="foodn"></td>
+		    <td id="cost"></td>
+			<td id="quantity"></td>
+			
+				<td id="price"></td>
+
+
+		</tr>	</table>
+</div>
+<h3 id="total">TOTAL=</h3>
+
+<a onclick="changingorder()" id="chord">changing_order</a>
+
+<a onclick="finalorder()" id="nxt">Next</a>
+<button id="chekout" onclick="payment()">Check out</button> 
+
+
+
+
+
+</div>
+
+
+
+
+
+</body>
+</html>
+
+
+
+
