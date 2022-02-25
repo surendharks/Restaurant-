@@ -1,0 +1,2 @@
+This is the project about the developing the web application for the the Restaurant
+In this project i have used the web technologies such as HTML, CSS,Javascript,PHP,SQL to provide the good looking interface and well desired functionalities
